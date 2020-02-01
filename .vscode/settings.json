@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "/home/tjosh/miniconda3/envs/torchlab/bin/python",
+    "python.formatting.provider": "black"
+}
