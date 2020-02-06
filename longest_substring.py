@@ -1,6 +1,7 @@
 """longest_substring
 """
 
+
 def rep_present(string):
     seg_dict = {}
     for s in string:
@@ -9,12 +10,13 @@ def rep_present(string):
         seg_dict[s] = s
     return False
 
+
 def lengthOfLongestSubstring(s):
     if s == "":
         return 0
     tail = 0
     cur_len = 0
-    seen = {s[0]:0}
+    seen = {s[0]: 0}
     longest = 1
     for head in range(1, len(s)):
         if s[head] in seen:
@@ -24,6 +26,7 @@ def lengthOfLongestSubstring(s):
         if cur_len > longest:
             longest = cur_len
     return longest
+
 
 if __name__ == "__main__":
     print(lengthOfLongestSubstring("baaaccb"))

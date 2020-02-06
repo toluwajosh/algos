@@ -12,24 +12,33 @@ Example:
     125
 """
 
+
 class BinaryNode:
     val = None
     level = None
     left = None
     right = None
+
     def __init__(self, val, level=None):
         self.val = val
         self.level = level
+
     def __str__(self):
-        tree_out = "{{[Node] Level: {},\nValue: {},\nLeft: {}, Right: {}}}".format(self.level, self.val, self.left, self.right)
+        tree_out = "{{[Node] Level: {},\nValue: {},\nLeft: {}, Right: {}}}".format(
+            self.level, self.val, self.left, self.right
+        )
         return tree_out
+
 
 class BinaryTree:
     def __init__(self, root_node):
         self.root_node = root_node
+
     def __str__(self):
         return self.root_node.__str__()
+
     # def add_node(self, )
+
 
 if __name__ == "__main__":
     two = BinaryNode(2, 1)
@@ -38,7 +47,6 @@ if __name__ == "__main__":
     one = BinaryNode(1, 3)
     six = BinaryNode(6, 3)
     five = BinaryNode(5, 3)
-
 
     three.left = one
     four.left = six

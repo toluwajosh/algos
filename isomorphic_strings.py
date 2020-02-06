@@ -21,6 +21,7 @@ Note:
 You may assume both s and t have the same length.
 """
 
+
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         seen_dict = {}
@@ -30,8 +31,10 @@ class Solution:
                     return False
                 seen_dict[s[i]] = t[i]
             else:
-                if seen_dict[s[i]]!=t[i]:
+                if seen_dict[s[i]] != t[i]:
                     return False
         return True
+
+
 if __name__ == "__main__":
     pass

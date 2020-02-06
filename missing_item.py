@@ -24,6 +24,7 @@ def find_missing_with_set(full_set, partial_set):
     missing_items = set(full_set) - set(partial_set)
     return list(missing_items)
 
+
 def find_missing_with_xor(full_set, partial_set):
     xor_sum = 0
     for num in full_set:
@@ -33,14 +34,24 @@ def find_missing_with_xor(full_set, partial_set):
     return xor_sum
 
 
+def find_missing_with_hash(full_set, partial_set):
+    partial_set_dict = {x: x for x in partial_set}
+    for ele in full_set:
+        if ele not in partial_set_dict:
+            return ele
+    return False
+
+
 if __name__ == "__main__":
     # print(reverse_string("ab"))
     # print(find_missing_with_set([4, 12, 9, 5, 6], [4, 9, 12, 6])[0])
     # print(find_missing_with_xor([4, 12, 9, 5, 6], [4, 9, 12, 6]))
+    print(find_missing_with_hash([4, 12, 9, 5, 6], [4, 9, 12, 6]))
 
-    thisset = {"apple", "banana", "cherry", "apple", "banana", "cherry"}
-    thatset = set(("apple", "banana", "cherry", "apple", "banana", "cherry", "toy"))
-    print(thisset)
-    print(thatset)
-    print(thisset==thatset)
-    print(list(thatset-thisset))
+    # using set on non numeric elements
+    # thisset = {"apple", "banana", "cherry", "apple", "banana", "cherry"}
+    # thatset = set(("apple", "banana", "cherry", "apple", "banana", "cherry", "toy"))
+    # print(thisset)
+    # print(thatset)
+    # print(thisset == thatset)
+    # print(list(thatset - thisset))

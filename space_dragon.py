@@ -22,16 +22,16 @@ def reverse_array(string_array):
     return reverse_array_between(string_array, front, rear)
 
 
-
 def reverse_words_in_array(string_array):
     string_array = reverse_array(string_array)
     prev = 0
     for i in range(len(string_array)):
-        if string_array[i]==' ':
-            string_array = reverse_array_between(string_array, prev, i-1)
-            prev = i+1
-    string_array = reverse_array_between(string_array, prev, len(string_array)-1)
+        if string_array[i] == " ":
+            string_array = reverse_array_between(string_array, prev, i - 1)
+            prev = i + 1
+    string_array = reverse_array_between(string_array, prev, len(string_array) - 1)
     return string_array
+
 
 if __name__ == "__main__":
     # print(reverse_words_in_array(['p', 'e', 'r', 'f', 'e', 'c', 't', ' ',
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     # print(reverse_words_in_array(['c', ' ',
     #                             'b', ' ',
     #                             'a' ]))
-    
+
     # edge case
-    print(reverse_words_in_array(['c', ' ',
-                                'a' ]))
+    print(reverse_words_in_array(["c", " ", "a"]))
+
